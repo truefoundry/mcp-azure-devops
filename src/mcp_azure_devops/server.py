@@ -5,13 +5,13 @@ A simple MCP server that exposes Azure DevOps capabilities.
 """
 import argparse
 from mcp.server.fastmcp import FastMCP
-from mcp_azure_devops.resources import work_items
+from mcp_azure_devops.features import register_all
 
 # Create a FastMCP server instance with a name
 mcp = FastMCP("Azure DevOps")
 
-# Register work item resources
-work_items.register_resources(mcp)
+# Register all features
+register_all(mcp)
 
 def main():
     """Entry point for the command-line script."""
@@ -19,10 +19,6 @@ def main():
     # Add more command-line arguments as needed
     
     args = parser.parse_args()
-    
-    # Register all resources and tools
-    # work_items.register_resources(mcp)
-    # ... register other resources and tools
     
     # Start the server
     mcp.run()
