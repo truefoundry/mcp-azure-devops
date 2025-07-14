@@ -26,7 +26,7 @@ def main():
     parser.parse_args()  # Store args if needed later
     
     # Start the server
-    mcp.run()
+    mcp.run(transport="streamable-http")
 
 if __name__ == "__main__":
     main()
