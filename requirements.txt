@@ -47,7 +47,7 @@ jsonschema==4.24.0
     # via mcp
 jsonschema-specifications==2025.4.1
     # via jsonschema
-mcp==1.11.0
+mcp==1.23.0
     # via mcp-azure-devops (pyproject.toml)
 msrest==0.7.1
     # via azure-devops
